@@ -1,7 +1,9 @@
 import React from 'react';
+import { BrowserRouter, Route, Link } from 'react-router-dom'
 import Header from './components/Header';
 import FolderList from './components/FolderList';
 import NoteList from './components/NoteList';
+import './App.css'
 
 class App extends React.Component {
   state ={
