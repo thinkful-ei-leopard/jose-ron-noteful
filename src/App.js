@@ -151,7 +151,7 @@ class App extends React.Component {
             <Route
               exact
               path="/"
-              render={() => <MainRoute folders={this.state.notes.folders} />}
+              render={() => <MainRoute folders={this.state.notes.folders} notes={this.state.notes.notes} />}
             />
 
             {/* folder route */}
@@ -167,6 +167,7 @@ class App extends React.Component {
               path="/note"
               render={() => <NoteRoute notes={this.state.notes.notes} />}
             />
+
             <Route component={NotFound} />
           </Switch>
         </div>

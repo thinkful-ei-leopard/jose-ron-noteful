@@ -12,7 +12,11 @@ export default function MainRoute(props) {
         path="/"
         render={() => <FolderList folders={props.folders} />}
       />
-      <Route exact path="/" component={NoteList} />
+        <Route
+        exact
+        path="/"
+        render={() => <NoteList notes={props.notes} />}
+      />
       </>
     )
   }

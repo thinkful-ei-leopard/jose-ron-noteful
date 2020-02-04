@@ -6,7 +6,7 @@ export default function NoteList(props) {
   return (
     <div className="noteList">
       <ul>
-        <Note />
+        <Note notes={props.notes}/>
       </ul>
     <AddNote />
     </div>
