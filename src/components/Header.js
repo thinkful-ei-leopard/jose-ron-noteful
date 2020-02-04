@@ -1,9 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
-export default function Header() {
-    return (
-        <h1>
-            Noteful
-        </h1>
-    )
+function Header() {
+  return (
+    <h1>
+      <Link to={'/'}> Noteful </Link>
+    </h1>
+  );
 }
+
+export default Header;

@@ -1,11 +1,11 @@
 import React from 'react';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
 import Header from './components/Header';
 import FolderList from './components/FolderList';
 import NoteList from './components/NoteList';
 import './App.css';
 import NoteRoute from './components/NoteRoute';
-import NotFound from'./components/NotFound';
+import NotFound from './components/NotFound';
 
 class App extends React.Component {
   state = {
@@ -146,24 +146,19 @@ class App extends React.Component {
       <main className="App">
         <Header />
         <div className="container">
-          <BrowserRouter>
-            <switch>
-            {/* main */}
-            <Route exact path="/" component={FolderList} />
-            <Route exact path="/" component={NoteList} />
+            <Switch>
+              {/* main */}
+              <Route exact path="/" component={FolderList} />
+              <Route exact path="/" component={NoteList} />
 
-            <switch>
-            {/* folder route */}
-            <Route exact path="/folder" component={FolderList} />
-            <Route exact path="/folder" component={NoteList} />
-            </switch>
-            {/* note route */}
-            <Route exact path="/note" component={NoteRoute}/>
+              {/* folder route */}
+              {/* <Route exact path="/folder" component={NoteList} /> */}
+              <Route exact path="/folder" component={FolderList} />
 
-            <Route component={NotFound} />
-            </switch>
-          </BrowserRouter>
-
+              {/* note route */}
+              <Route exact path="/note" component={NoteRoute} />
+              <Route component={NotFound} />
+            </Switch>
         </div>
       </main>
     );
