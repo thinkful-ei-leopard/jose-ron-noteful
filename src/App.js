@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './components/Header';
 import FolderList from './components/FolderList';
+import NoteList from './components/NoteList';
 
 class App extends React.Component {
   state ={
@@ -128,6 +129,7 @@ class App extends React.Component {
     <main className='App'>
       <Header />
       <FolderList />
+      <NoteList />
     </main>
   );
   }
