@@ -4,6 +4,7 @@ import Header from './components/Header';
 import FolderList from './components/FolderList';
 import NoteList from './components/NoteList';
 import './App.css';
+import NoteRoute from './components/NoteRoute';
 
 class App extends React.Component {
   state = {
@@ -151,6 +152,8 @@ class App extends React.Component {
 
             <Route exact path="/folder" component={FolderList} />
             <Route exact path="/folder" component={NoteList} />
+
+            <Route exact path="/note" component={NoteRoute}/>
 
           </BrowserRouter>
 
