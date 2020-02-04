@@ -1,10 +1,11 @@
 import React from 'react'
+import Folder from './Folder';
 
-function FolderList() {
+function FolderList(props) {
   return (
     <div>
       <ul>
-        <p>Folders</p>
+        <Folder />
       </ul>
     </div>
   )
