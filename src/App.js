@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './components/Header';
+import FolderList from './components/FolderList';
 
 class App extends React.Component {
   state ={
@@ -126,6 +127,7 @@ class App extends React.Component {
   return (
     <main className='App'>
       <Header />
+      <FolderList />
     </main>
   );
   }
