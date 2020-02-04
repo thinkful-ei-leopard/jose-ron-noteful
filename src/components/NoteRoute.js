@@ -3,10 +3,12 @@ import Note from './Note';
 
 
 export default function NoteRoute(props) {
+    console.log(props.notes)
+    const note = props.notes.map(element => <p>{element.name}</p>)
     return (
         <>
         <Note />
-        <p> Note content goes here.</p>
+        <p>{note}</p>
         <div>
             <button>Go Back</button>
         </div>

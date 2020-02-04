@@ -7,7 +7,11 @@ import NoteList from '../NoteList';
 export default function MainRoute(props) {
     return (
       <>
-      <Route exact path="/" component={FolderList} />
+        <Route
+        exact
+        path="/"
+        render={() => <FolderList folders={props.folders} />}
+      />
       <Route exact path="/" component={NoteList} />
       </>
     )

@@ -148,9 +148,11 @@ class App extends React.Component {
         <div className="container">
           <Switch>
             {/* main */}
-            <Route exact path="/">
-              <MainRoute />
-            </Route>
+            <Route
+              exact
+              path="/"
+              render={() => <MainRoute folders={this.state.notes.folders} />}
+            />
 
             {/* folder route */}
             <Route
@@ -160,7 +162,11 @@ class App extends React.Component {
             />
 
             {/* note route */}
-            <Route exact path="/note" component={NoteRoute} />
+            <Route
+              exact
+              path="/note"
+              render={() => <NoteRoute notes={this.state.notes.notes} />}
+            />
             <Route component={NotFound} />
           </Switch>
         </div>
