@@ -6,6 +6,8 @@ import NoteList from './components/NoteList';
 import './App.css';
 import NoteRoute from './components/NoteRoute';
 import NotFound from './components/NotFound';
+import MainRoute from './components/RouterComponents/MainRoute'
+import FolderRoute from './components/RouterComponents/FolderRoute'
 
 class App extends React.Component {
   state = {
@@ -148,12 +150,14 @@ class App extends React.Component {
         <div className="container">
             <Switch>
               {/* main */}
-              <Route exact path="/" component={FolderList} />
-              <Route exact path="/" component={NoteList} />
+              <Route exact path="/">
+                <MainRoute />
+              </Route>
 
               {/* folder route */}
-              {/* <Route exact path="/folder" component={NoteList} /> */}
-              <Route exact path="/folder" component={FolderList} />
+              <Route exact path="/folder">
+                <FolderRoute />
+              </Route>
 
               {/* note route */}
               <Route exact path="/note" component={NoteRoute} />
