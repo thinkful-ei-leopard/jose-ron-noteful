@@ -4,8 +4,7 @@ import AddNote from './AddNote';
 
 export default function NoteList(props) {
   return (
-    <div>
-        <h2>Notes</h2>
+    <div className="noteList">
       <ul>
         <Note />
       </ul>

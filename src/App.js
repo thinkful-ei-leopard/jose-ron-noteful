@@ -130,8 +130,10 @@ class App extends React.Component {
   return (
     <main className='App'>
       <Header />
+      <div className="container">
       <FolderList />
       <NoteList />
+      </div>
     </main>
   );
   }

@@ -4,8 +4,7 @@ import AddFolder from './AddFolder';
 
 function FolderList(props) {
   return (
-    <div>
-      <h2>Folders</h2>
+    <div className="folderList">
       <ul>
         <Folder />
       </ul>

@@ -1,6 +1,35 @@
-.App {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+h1 {
+  text-align: center;
 }
+
+.container {
+  display: flex;
+  padding: 20px;
+}
+
+.folderList {
+ display: inline-block;
+ position: relative;
+ left: 0;
+ width: 200px;
+}
+
+.folderList ul,
+.noteList ul {
+  padding-left: 0;
+}
+
+.noteList {
+display: inline-block;
+margin-left: 100px;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+
+
