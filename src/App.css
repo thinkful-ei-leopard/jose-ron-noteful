@@ -1,5 +1,8 @@
 h1 {
   text-align: center;
+  border-bottom: 1px solid black;
+  padding: 40px;
+  font-size: 50px;
 }
 
 .container {
@@ -12,6 +15,8 @@ h1 {
  position: relative;
  left: 0;
  width: 200px;
+ border-right: 1px solid black;
+ height: 100vh;
 }
 
 .folderList ul,
@@ -21,14 +26,19 @@ h1 {
 
 .noteList {
 display: inline-block;
-margin-left: 100px;
+margin-left: 40%;
 }
 
 li {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 10px;
   text-align: left;
+  border: 1px solid black;
+}
+
+.noteElement {
+  width: 400px;
 }
 
 

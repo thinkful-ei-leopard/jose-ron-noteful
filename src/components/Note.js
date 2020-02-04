@@ -2,7 +2,7 @@ import React from 'react'
 
 function Note(props) {
   return (
-    <div>
+    <div className="noteElement">
       <li>placeholder Note</li>
     </div>
   )
