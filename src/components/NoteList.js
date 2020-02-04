@@ -1,12 +1,12 @@
 import React from 'react';
+import Note from './Note';
 
-
-export default function NoteList() {
-    return (
-        <div>
-            <ul>
-                <li>Hi i am a note!</li>
-            </ul>
-        </div>
-    )
+export default function NoteList(props) {
+  return (
+    <div>
+      <ul>
+        <Note />
+      </ul>
+    </div>
+  );
 }
