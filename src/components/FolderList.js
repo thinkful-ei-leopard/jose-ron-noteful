@@ -1,5 +1,6 @@
 import React from 'react'
 import Folder from './Folder';
+import AddFolder from './AddFolder';
 
 function FolderList(props) {
   return (
@@ -8,6 +9,7 @@ function FolderList(props) {
       <ul>
         <Folder />
       </ul>
+      <AddFolder />
     </div>
   )
 }
