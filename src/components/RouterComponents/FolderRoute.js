@@ -11,7 +11,11 @@ function FolderRoute(props) {
         path="/folder"
         render={() => <FolderList folders={props.folders} />}
       />
-      <Route exact path="/folder" component={NoteList} />
+        <Route
+        exact
+        path="/folder"
+        render={() => <NoteList notes={props.notes} />}
+      />
     </>
   );
 }

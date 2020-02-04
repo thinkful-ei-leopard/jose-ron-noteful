@@ -158,7 +158,7 @@ class App extends React.Component {
             <Route
               exact
               path="/folder"
-              render={() => <FolderRoute folders={this.state.notes.folders} />}
+              render={() => <FolderRoute folders={this.state.notes.folders} notes={this.state.notes.notes}/>}
             />
 
             {/* note route */}
