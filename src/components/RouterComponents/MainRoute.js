@@ -4,7 +4,7 @@ import FolderList from '../FolderList';
 import NoteList from '../NoteList';
 
 
-export default function MainRoute() {
+export default function MainRoute(props) {
     return (
       <>
       <Route exact path="/" component={FolderList} />

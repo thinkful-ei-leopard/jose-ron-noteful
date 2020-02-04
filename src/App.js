@@ -1,13 +1,11 @@
 import React from 'react';
 import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
 import Header from './components/Header';
-import FolderList from './components/FolderList';
-import NoteList from './components/NoteList';
 import './App.css';
 import NoteRoute from './components/NoteRoute';
 import NotFound from './components/NotFound';
-import MainRoute from './components/RouterComponents/MainRoute'
-import FolderRoute from './components/RouterComponents/FolderRoute'
+import MainRoute from './components/RouterComponents/MainRoute';
+import FolderRoute from './components/RouterComponents/FolderRoute';
 
 class App extends React.Component {
   state = {
@@ -148,21 +146,23 @@ class App extends React.Component {
       <main className="App">
         <Header />
         <div className="container">
-            <Switch>
-              {/* main */}
-              <Route exact path="/">
-                <MainRoute />
-              </Route>
+          <Switch>
+            {/* main */}
+            <Route exact path="/">
+              <MainRoute />
+            </Route>
 
-              {/* folder route */}
-              <Route exact path="/folder">
-                <FolderRoute />
-              </Route>
+            {/* folder route */}
+            <Route
+              exact
+              path="/folder"
+              render={() => <FolderRoute folders={this.state.notes.folders} />}
+            />
 
-              {/* note route */}
-              <Route exact path="/note" component={NoteRoute} />
-              <Route component={NotFound} />
-            </Switch>
+            {/* note route */}
+            <Route exact path="/note" component={NoteRoute} />
+            <Route component={NotFound} />
+          </Switch>
         </div>
       </main>
     );
@@ -170,3 +170,4 @@ class App extends React.Component {
 }
 
 export default App;
+
